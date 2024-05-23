@@ -32,6 +32,8 @@ partial class ListaDePessoas
         txtPesquisa = new TextBox();
         btnBuscar = new Button();
         dgvPessoas = new DataGridView();
+        btnDeletar = new Button();
+        btnAtualizar = new Button();
         ((System.ComponentModel.ISupportInitialize)dgvPessoas).BeginInit();
         SuspendLayout();
         // 
@@ -69,20 +71,44 @@ partial class ListaDePessoas
         dgvPessoas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
         dgvPessoas.Location = new Point(12, 78);
         dgvPessoas.Name = "dgvPessoas";
-        dgvPessoas.Size = new Size(598, 289);
+        dgvPessoas.Size = new Size(598, 238);
         dgvPessoas.TabIndex = 3;
+        // 
+        // btnDeletar
+        // 
+        btnDeletar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        btnDeletar.Location = new Point(516, 322);
+        btnDeletar.Name = "btnDeletar";
+        btnDeletar.Size = new Size(94, 32);
+        btnDeletar.TabIndex = 4;
+        btnDeletar.Text = "Deletar";
+        btnDeletar.UseVisualStyleBackColor = true;
+        btnDeletar.Click += button1_Click;
+        // 
+        // btnAtualizar
+        // 
+        btnAtualizar.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        btnAtualizar.Location = new Point(413, 322);
+        btnAtualizar.Name = "btnAtualizar";
+        btnAtualizar.Size = new Size(97, 32);
+        btnAtualizar.TabIndex = 5;
+        btnAtualizar.Text = "Atualizar";
+        btnAtualizar.UseVisualStyleBackColor = true;
+        btnAtualizar.Click += btnAtualizar_Click;
         // 
         // ListaDePessoas
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(622, 430);
+        ClientSize = new Size(622, 362);
+        Controls.Add(btnAtualizar);
+        Controls.Add(btnDeletar);
         Controls.Add(dgvPessoas);
         Controls.Add(btnBuscar);
         Controls.Add(txtPesquisa);
         Controls.Add(label1);
         Name = "ListaDePessoas";
-        Text = "ListaDePessoas";
+        Text = "[MANUTENÇÃO DE CLIENTES]";
         ((System.ComponentModel.ISupportInitialize)dgvPessoas).EndInit();
         ResumeLayout(false);
         PerformLayout();
@@ -94,4 +120,6 @@ partial class ListaDePessoas
     private TextBox txtPesquisa;
     private Button btnBuscar;
     private DataGridView dgvPessoas;
+    private Button btnDeletar;
+    private Button btnAtualizar;
 }

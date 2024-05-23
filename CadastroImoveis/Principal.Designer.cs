@@ -32,6 +32,7 @@ partial class Principal
         manutençãoToolStripMenuItem = new ToolStripMenuItem();
         pessoasToolStripMenuItem = new ToolStripMenuItem();
         listarPessoasToolStripMenuItem = new ToolStripMenuItem();
+        cadastrarToolStripMenuItem = new ToolStripMenuItem();
         menuStrip1.SuspendLayout();
         SuspendLayout();
         // 
@@ -53,7 +54,7 @@ partial class Principal
         // 
         // pessoasToolStripMenuItem
         // 
-        pessoasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { listarPessoasToolStripMenuItem });
+        pessoasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { listarPessoasToolStripMenuItem, cadastrarToolStripMenuItem });
         pessoasToolStripMenuItem.Name = "pessoasToolStripMenuItem";
         pessoasToolStripMenuItem.Size = new Size(180, 22);
         pessoasToolStripMenuItem.Text = "Pessoas";
@@ -64,6 +65,13 @@ partial class Principal
         listarPessoasToolStripMenuItem.Size = new Size(180, 22);
         listarPessoasToolStripMenuItem.Text = "Listar Pessoas";
         listarPessoasToolStripMenuItem.Click += listarPessoasToolStripMenuItem_Click;
+        // 
+        // cadastrarToolStripMenuItem
+        // 
+        cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
+        cadastrarToolStripMenuItem.Size = new Size(180, 22);
+        cadastrarToolStripMenuItem.Text = "Cadastrar";
+        cadastrarToolStripMenuItem.Click += cadastrarToolStripMenuItem_Click;
         // 
         // Principal
         // 
@@ -87,4 +95,5 @@ partial class Principal
     private ToolStripMenuItem manutençãoToolStripMenuItem;
     private ToolStripMenuItem pessoasToolStripMenuItem;
     private ToolStripMenuItem listarPessoasToolStripMenuItem;
+    private ToolStripMenuItem cadastrarToolStripMenuItem;
 }

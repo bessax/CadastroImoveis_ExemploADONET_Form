@@ -15,4 +15,11 @@ public partial class Principal : Form
         form.MdiParent = this;
         form.Show();
     }
+
+    private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        var form = new CadastroDePessoas();
+        form.MdiParent = this;
+        form.Show();
+    }
 }
