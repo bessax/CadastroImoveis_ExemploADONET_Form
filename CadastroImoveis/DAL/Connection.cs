@@ -1,10 +1,14 @@
 ﻿using Npgsql;
+using System.Configuration;
 
 namespace CadastroImoveis.DAL;
 public static class Connection
 {
+  static private string connectionString = string.Empty;
   public static NpgsqlConnection GetConnection()
     {
-        return new NpgsqlConnection("Server=127.0.0.1;Port=5432;Database=exemploBD;User Id=postgres;Password=root;");
+        connectionString = ConfigurationManager.ConnectionStrings["database"].ConnectionString;
+
+        return new NpgsqlConnection(connectionString);
     }
 }
